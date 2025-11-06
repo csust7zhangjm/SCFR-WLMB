@@ -1,0 +1,25 @@
+ Training configuration
+GPU: [0,1]
+
+VERBOSE: False
+
+MODEL:
+  MODE: 'SCFR_WLMB-LOL'
+
+# Optimization arguments.
+OPTIM:
+  BATCH: 2
+  EPOCHS: 300
+  # EPOCH_DECAY: [10]
+  LR_INITIAL: 5e-5
+  LR_MIN: 1e-5
+  # BETA1: 0.9
+
+TRAINING:
+  VAL_AFTER_EVERY: 1
+  RESUME: False
+  TRAIN_PS: 256
+  VAL_PS: 256
+  TRAIN_DIR: '/root/autodl-tmp/datasets/LOL/our485'       # path to training data
+  VAL_DIR: '/root/autodl-tmp/datasets/LOL/eval15' # path to validation data
+  SAVE_DIR: '/root/autodl-tmp/checkpoints'           # path to save models and images
